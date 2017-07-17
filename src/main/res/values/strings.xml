@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VoterReg</string>
+    <string name="name">Enter your full name</string>
+    <string name="idNumber">Enter your ID number</string>
+    <string name="station">Enter the voting station of your choice</string>
+    <string name="btnRegister">Register</string>
+    <string name="btnView">View</string>
+
+</resources>
