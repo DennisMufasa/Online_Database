@@ -2,8 +2,10 @@ package com.example.mufasa.voterreg;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -16,6 +18,8 @@ import cz.msebera.android.httpclient.client.HttpClient;
 public class voters extends AppCompatActivity {
 
     ListView lstView;
+    ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,8 @@ public class voters extends AppCompatActivity {
         setContentView(R.layout.activity_voters);
 
         lstView= (ListView)findViewById(R.id.lstView);
+
+        progressBar=(ProgressBar)findViewById(R.id.progressBar);
 
         AsyncHttpClient client = new AsyncHttpClient();
 
@@ -37,7 +43,8 @@ public class voters extends AppCompatActivity {
 
                 lstView.setAdapter(adapter);
 
-                
+                progressBar.setVisibility(View.GONE);
+
             }
 
             @Override
